@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="english">
+
+  <head>
+    <meta charset="utf-8">
+    <title>The Game, Sample Play</title>
+    <link rel="stylesheet" href="css/sample.css"/>
+    <link rel="stylesheet" href="css/commonElements.css"/>
+  </head>
+
+  <body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sample.html" class="active-page">The Game</a></li>
+      <li><a href="rules.html">The Rules</a></li>
+      <li><a href="scores.html">The Scores</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <header><h1>Battleship Sample Game</h1></header>
+
+    <h3>Timer: <span class="red-text">00:05:32 </span><button class="restart-button">Restart</button></h3>
+
+    <div class ="main-container">
+      <!-- Enemy board example -->
+      <div class="container">
+        <div class="text-box">
+          <p class ="italics">Below is a sample of the enemy board where "X" represents your miss and "/" represents your hit.</p>
+        </div>
+
+        <div class="grid-container">
+          <!-- Create the column headers -->
+          <div class="header"></div>
+          <div class="header">A</div>
+          <div class="header">B</div>
+          <div class="header">C</div>
+          <div class="header">D</div>
+          <div class="header">E</div>
+          <div class="header">F</div>
+          <div class="header">G</div>
+          <div class="header">H</div>
+          <div class="header">I</div>
+          <div class="header">J</div>
+
+          <!-- Rows -->
+          <!-- Row 0 -->
+          <div class="row-header">0</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell hit">/</div>
+          <div class="cell hit">/</div>
+          <div class="cell hit">/</div>
+          <div class="cell hit">/</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <!-- Row 1 -->
+          <div class="row-header">1</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <!-- Row 2 -->
+          <div class="row-header">2</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell miss">X</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <!-- Row 3 -->
+          <div class="row-header">3</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell miss">X</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <!-- Row 4 -->
+          <div class="row-header">4</div>
+          <div class="cell miss">X</div>
+          <div class="cell hit">/</div>
+          <div class="cell hit">/</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell miss">X</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <!-- Row 5 -->
+          <div class="row-header">5</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell miss">X</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <!-- Row 6 -->
+          <div class="row-header">6</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell miss">X</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <!-- Row 7 -->
+          <div class="row-header">7</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell miss">X</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <!-- Row 8 -->
+          <div class="row-header">8</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell miss">X</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <!-- Row 9 -->
+          <div class="row-header">9</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell miss">X</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell miss">X</div>
+
+          <!-- Row 10 -->
+          <div class="row-header">10</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell hit">/</div>
+        </div>
+      </div>
+
+      <!-- Player board example -->
+      <div class="container">
+      <div class="text-box">
+        <p class="italics">Below is a sample of the player board where "0" represents where your ships are and an "X" is where your ship was hit.</p>
+      </div>
+
+    <div class="grid-container">
+      <!-- Create the column headers -->
+      <div class="header"></div>
+      <div class="header">A</div>
+      <div class="header">B</div>
+      <div class="header">C</div>
+      <div class="header">D</div>
+      <div class="header">E</div>
+      <div class="header">F</div>
+      <div class="header">G</div>
+      <div class="header">H</div>
+      <div class="header">I</div>
+      <div class="header">J</div>
+
+      <!-- Rows -->
+      <!-- Row 0 -->
+      <div class="row-header">0</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell miss">X</div>
+      <div class="cell miss">X</div>
+      <div class="cell miss">X</div>
+      <div class="cell miss">X</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+      <!-- Row 1 -->
+      <div class="row-header">1</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+      <!-- Row 2 -->
+      <div class="row-header">2</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell ship">0</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+      <!-- Row 3 -->
+      <div class="row-header">3</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell ship">0</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+      <!-- Row 4 -->
+      <div class="row-header">4</div>
+      <div class="cell"></div>
+      <div class="cell miss">X</div>
+      <div class="cell miss">X</div>
+      <div class="cell ship">0</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell ship">0</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+      <!-- Row 5 -->
+      <div class="row-header">5</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell ship">0</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+      <!-- Row 6 -->
+      <div class="row-header">6</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell ship">0</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+      <!-- Row 7 -->
+      <div class="row-header">7</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell ship">0</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+      <!-- Row 8 -->
+      <div class="row-header">8</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell ship">0</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+      <!-- Row 9 -->
+      <div class="row-header">9</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell ship">0</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+      <!-- Row 10 -->
+      <div class="row-header">10</div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell ship">0</div>
+      <div class="cell miss">X</div>
+
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <footer>
+    <p><i>Derek Laister</i><br/>
+      CS 5610 | Winter 2025</p>
+  </footer>
+
+  </body>
+
+</html>
+
+<!--
+- Navbar modeled after Bro Code demo: https://www.youtube.com/watch?v=f3uCSh6LIY0
+- CSS image style: https://www.w3schools.com/css/css3_images.asp
+- Span: https://www.w3schools.com/tags/tag_span.asp
+- Text Outline: https://www.w3schools.com/cssref/pr_outline.php
+- A second pseudo-element besides hover: https://www.w3schools.com/css/css_pseudo_elements.asp
+- @media - https://www.w3schools.com/css/tryit.asp?filename=trycss3_media_queries1
+- Flexbox - https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+-->
