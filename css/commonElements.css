@@ -46,7 +46,7 @@ main{
 
 h1{
   text-align: center;
-  font-family: 'Helvetica Neue',serif;
+  font-family: "Myanmar MN", cursive;
 }
 
 h3{
@@ -57,6 +57,10 @@ h3{
 body{
   margin: 0;
   background-color: orange;
+}
+
+p{
+  font-family: "Avenir Next Condensed", cursive;
 }
 
 footer{
